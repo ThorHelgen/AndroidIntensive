@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0BAFA0"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/austria_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/austria_flag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/poland_flag"
+        app:layout_constraintBottom_toTopOf="@id/italy_flag"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/poland_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/poland_flag"
+        app:layout_constraintLeft_toRightOf="@id/austria_flag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/columbia_flag"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/italy_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/italy_flag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/austria_flag"
+        app:layout_constraintRight_toLeftOf="@id/columbia_flag"
+        app:layout_constraintBottom_toTopOf="@id/madagascar_flag"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/columbia_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/columbia_flag"
+        app:layout_constraintLeft_toRightOf="@id/italy_flag"
+        app:layout_constraintTop_toBottomOf="@id/poland_flag"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/thailand_flag"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/madagascar_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/madagascar_flag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/italy_flag"
+        app:layout_constraintRight_toLeftOf="@id/thailand_flag"
+        app:layout_constraintBottom_toTopOf="@id/denmark_flag"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/thailand_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/thailand_flag"
+        app:layout_constraintLeft_toRightOf="@id/madagascar_flag"
+        app:layout_constraintTop_toBottomOf="@id/columbia_flag"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/switzerland_flag"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/denmark_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/denmark_flag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/madagascar_flag"
+        app:layout_constraintRight_toLeftOf="@id/switzerland_flag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/switzerland_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:foreground="@drawable/switzerland_flag"
+        app:layout_constraintLeft_toRightOf="@id/denmark_flag"
+        app:layout_constraintTop_toBottomOf="@id/thailand_flag"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="16:11"
+        app:cardCornerRadius="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

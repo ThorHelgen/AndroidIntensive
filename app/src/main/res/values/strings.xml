@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PictureDownload</string>
+    <string name="picture_URL_edit_hint">Paste picture URL and tap Enter</string>
+
+    <string name="picture_URL_bundle_key">loadedImage</string>
+    <string name="URL_edit_bundle_key">loadedImage</string>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="Clock">
+        <attr name="secondColor" format="color|reference" />
+        <attr name="minuteColor" format="color|reference" />
+        <attr name="hourColor" format="color|reference" />
+        <attr name="secondLength" format="dimension" />
+        <attr name="minuteLength" format="dimension" />
+        <attr name="hourLength" format="dimension" />
+        <attr name="secondWidth" format="dimension" />
+        <attr name="minuteWidth" format="dimension" />
+        <attr name="hourWidth" format="dimension" />
+    </declare-styleable>
+</resources>

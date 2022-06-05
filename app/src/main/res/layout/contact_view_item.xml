@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="contact"
+            type="com.thorhelgen.contacts.Contact" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contactItemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/firstNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.firstName}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNumberTxt"
+            app:layout_constraintEnd_toStartOf="@id/lastNameTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lastNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.lastName}"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toTopOf="@id/phoneNumberTxt"
+            app:layout_constraintStart_toEndOf="@id/firstNameTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/phoneNumberTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.phoneNumber}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameTxt" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumberTxt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

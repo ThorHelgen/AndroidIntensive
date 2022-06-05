@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contact"
+            type="com.thorhelgen.contacts.Contact" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".ContactFragment" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/firstNameLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name_label"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/firstNameEdt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/firstNameEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:text="@{contact.firstName}"
+                app:layout_constraintBottom_toTopOf="@id/lastNameLbl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstNameLbl" />
+
+            <TextView
+                android:id="@+id/lastNameLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name_label"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/lastNameEdt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstNameEdt" />
+            <EditText
+                android:id="@+id/lastNameEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:text="@{contact.lastName}"
+                app:layout_constraintBottom_toTopOf="@id/phoneNumberLbl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastNameLbl"/>
+
+            <TextView
+                android:id="@+id/phoneNumberLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name_label"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/phoneNumberEdt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastNameEdt" />
+
+            <EditText
+                android:id="@+id/phoneNumberEdt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:text="@{contact.phoneNumber}"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/contactSaveBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumberLbl" />
+
+            <Button
+                android:id="@+id/contactSaveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/save_contact_label"
+                android:textSize="20sp"
+                android:inputType="text"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberEdt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

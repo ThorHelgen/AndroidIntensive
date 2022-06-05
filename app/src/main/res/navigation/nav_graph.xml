@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactsOverviewFragment">
+
+    <fragment
+        android:id="@+id/contactsOverviewFragment"
+        android:name="com.thorhelgen.contacts.ContactsOverviewFragment"
+        android:label="@string/contacts_overview_label"
+        tools:layout="@layout/fragment_contacts_overview" >
+        <action
+            android:id="@+id/action_contactsOverviewFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.thorhelgen.contacts.ContactFragment"
+        android:label="@string/contact_label"
+        tools:layout="@layout/fragment_contact" />
+</navigation>

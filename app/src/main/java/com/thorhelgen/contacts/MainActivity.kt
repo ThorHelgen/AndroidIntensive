@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val navHostFragment = supportFragmentManager
-//            .findFragmentById(R.id.navController) as NavHostFragment
-//        navController = navHostFragment.navController
-//        NavigationUI.setupActionBarWithNavController(this, navController)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.navController) as NavHostFragment
+        navController = navHostFragment.navController
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
-//    override fun onSupportNavigateUp(): Boolean {
-//        return navController.navigateUp() || super.onSupportNavigateUp()
-//    }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
 }

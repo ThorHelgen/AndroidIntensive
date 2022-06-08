@@ -6,13 +6,27 @@
     <data>
         <variable
             name="contact"
-            type="com.thorhelgen.contacts.Contact" />
+            type="com.thorhelgen.contacts.list.Contact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/contactItemLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/contactItemIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            app:imageUrl="@{contact.imageUrl}"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintEnd_toStartOf="@id/firstNameTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/firstNameTxt"
@@ -22,7 +36,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/phoneNumberTxt"
             app:layout_constraintEnd_toStartOf="@id/lastNameTxt"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/contactItemIcon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -31,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text="@{contact.lastName}"
             android:textSize="20sp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
             app:layout_constraintBottom_toTopOf="@id/phoneNumberTxt"
             app:layout_constraintStart_toEndOf="@id/firstNameTxt"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,8 +57,10 @@
             android:layout_height="wrap_content"
             android:text="@{contact.phoneNumber}"
             android:textSize="20sp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
             app:layout_constraintBottom_toTopOf="@id/divider"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/contactItemIcon"
             app:layout_constraintTop_toBottomOf="@+id/lastNameTxt" />
 
         <com.google.android.material.divider.MaterialDivider
